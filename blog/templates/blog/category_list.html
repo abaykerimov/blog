@@ -1,8 +1,8 @@
 {% extends "index.html" %}
 
-{% block categories %}
+{% block navbar %}
     <ul class="nav">
-        {% for category in object_list %}
+        {% for category in category_list %}
         <li><a href="" class="">{{ category.category_name }}</a></li>
         {% endfor %}
     </ul>

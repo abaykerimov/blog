@@ -1,7 +1,7 @@
 {% extends "index.html" %}
 
 {% block article %}
-    {% for article in object_list %}
+    {% for article in list %}
         <h2>
             <a href="#">{{ article.title }}</a>
         </h2>
@@ -10,7 +10,7 @@
         </p>
         <p><span class="glyphicon glyphicon-time"></span> {{ article.published }}</p>
         <hr>
-        <img class="img-responsive" src="{{ article.image }}" alt="">
+        <img class="img-responsive" src="../{{ article.image.url }}" alt="">
         <hr>
         <p>{{ article.content }}</p>
         <a class="btn btn-primary" href="#">Читать дальше <span class="glyphicon glyphicon-chevron-right"></span></a>

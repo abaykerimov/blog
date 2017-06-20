@@ -6,9 +6,12 @@ from blog.models import *
 
 class IndexListView(ListView):
     context_object_name = "list"
+    queryset = Article.objects.filter(status=1).order_by("-published")
 
     def get_context_data(self, **kwargs):
         context = super(IndexListView, self).get_context_data(**kwargs)
+        context['category_list'] = Category.objects.all()
+        return context
 
 
 class ArticleListView(ListView):

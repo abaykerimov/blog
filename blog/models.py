@@ -16,8 +16,8 @@ class Category(models.Model):
 
 class Article(models.Model):
     STATUSES = (
-        (0, u'Опубликованные'),
-        (1, u'Не опубликованные')
+        (1, u'Опубликованные'),
+        (0, u'Не опубликованные')
     )
     title = models.CharField(verbose_name=u'Заголовок', max_length=255)
     image = models.ImageField(upload_to="images/article", blank=True, null=True)
